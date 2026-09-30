@@ -43,8 +43,12 @@ async function fetchPrayerTimes() {
     const lng = 39.130397;
     const method = 4;
 
+    // إضافة التعديل الدقيق (tune) بالدقائق: [الفجر, الشروق, الظهر, العصر, المغرب, العشاء]
+    // tune=Fajr,Sunrise,Dhuhr,Asr,Maghrib,Isha
+    const tune = "14,0,3,2,3,-7";
+
     try {
-        const response = await fetch(`https://api.aladhan.com/v1/timings?latitude=${lat}&longitude=${lng}&method=${method}`);
+        const response = await fetch(`https://api.aladhan.com/v1/timings?latitude=${lat}&longitude=${lng}&method=${method}&tune=${tune}`);
         const data = await response.json();
         
         if (data.code === 200) {
@@ -54,7 +58,6 @@ async function fetchPrayerTimes() {
             document.getElementById('gregorian-date').innerText = dateData.gregorian.date.split('-').reverse().join(' - ');
             document.getElementById('hijri-date').innerText = `${dateData.hijri.day} ${dateData.hijri.month.ar} ${dateData.hijri.year}`;
             
-            // تحديد اسم اليوم باللغة العربية بدقة
             const todayIndex = new Date().getDay();
             document.getElementById('current-day').innerText = daysArabic[todayIndex];
 
@@ -69,6 +72,9 @@ async function fetchPrayerTimes() {
         }
     } catch (error) {
         console.error("خطأ في جلب الأوقات:", error);
+    }
+}
+
     }
 }
 
