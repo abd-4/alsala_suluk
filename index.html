@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواقيت الصلاة - سلوك وريفها</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-border">
+        <div class="inner-container">
+            
+            <!-- التاريخ الهجري والميلادي -->
+            <div class="date-header">
+                <div class="date-box">
+                    <span class="date-title">📅 التاريخ الميلادي</span>
+                    <div class="date-value" id="gregorian-date">-- -- ----</div>
+                </div>
+                <div class="date-box">
+                    <span class="date-title">🌙 التاريخ الهجري</span>
+                    <div class="date-value" id="hijri-date">-- ---- ----</div>
+                </div>
+            </div>
+
+            <!-- بطاقة الحديث الشريف -->
+            <div class="hadith-card">
+                <div class="hadith-header">
+                    <h2>مواقيت الصلاة</h2>
+                </div>
+                <p class="hadith-text" id="hadith-text">جاري تحميل الحديث الشريف...</p>
+                <span class="hadith-source" id="hadith-source"></span>
+            </div>
+
+            <!-- اسم اليوم -->
+            <div class="day-badge">
+                <span id="current-day">--</span>
+            </div>
+
+            <!-- جدول مواقيت الصلاة -->
+            <div class="prayer-list">
+                <div class="prayer-row">
+                    <div class="prayer-name">الفجر</div>
+                    <div class="prayer-time"><span id="fajr">--:--</span> <span class="period" id="fajr-p">ص</span></div>
+                </div>
+                <div class="prayer-row">
+                    <div class="prayer-name">الشروق</div>
+                    <div class="prayer-time"><span id="sunrise">--:--</span> <span class="period" id="sunrise-p">ص</span></div>
+                </div>
+                <div class="prayer-row">
+                    <div class="prayer-name">الظهر</div>
+                    <div class="prayer-time"><span id="dhuhr">--:--</span> <span class="period" id="dhuhr-p">م</span></div>
+                </div>
+                <div class="prayer-row">
+                    <div class="prayer-name">العصر</div>
+                    <div class="prayer-time"><span id="asr">--:--</span> <span class="period" id="asr-p">م</span></div>
+                </div>
+                <div class="prayer-row">
+                    <div class="prayer-name">المغرب</div>
+                    <div class="prayer-time"><span id="maghrib">--:--</span> <span class="period" id="maghrib-p">م</span></div>
+                </div>
+                <div class="prayer-row">
+                    <div class="prayer-name">العشاء</div>
+                    <div class="prayer-time"><span id="isha">--:--</span> <span class="period" id="isha-p">م</span></div>
+                </div>
+            </div>
+
+            <!-- قسم التواصل مع المطور -->
+            <div class="developer-section">
+                <h3>للأسئلة والأستفسارات والاقتراحات التحسينية</h3>
+                <a href="https://wa.me/+963939084991" target="_blank" class="whatsapp-btn">تواصل مع المطور</a>
+            </div>
+
+            <!-- التذييل -->
+            <div class="footer-note">
+                <span>هذا التوقيت مخصص لمنطقة سلوك وريفها فقط</span>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
